@@ -28,9 +28,9 @@ fig.subplots_adjust(wspace=0.3) # space between subplots in [inch]
 
 ax = fig.add_subplot(1,3,1) ## (total number of rows,columns, index of this subplot)
 ax.plot(daten['loi_toc_perc'], daten['depth'], 'ro--') # column names of the data and depth values, last argument is for the line properties.
-plt.xlabel('%') # Label on the x-axis of this subplot
+plt.xlabel('%') # Label on the x-axis of this subplot, should be used to give information on the used unit.
 plt.ylabel('Tiefe [cm]') # only for the first subplot!!!
-plt.title('TOC (LOI)')
+plt.title('TOC (LOI)') # Title of this subplot
 plt.locator_params(axis='x', tight=False, nbins=3) # adjustment of ticks on the x-axis of this subplot, tight=False/True, nbins=count of bins
 plt.grid(True) # turn on/off the grid for this subplot
 plt.ylim(ymax=223) # manually set the range for the depth axis. set the max depth here.
